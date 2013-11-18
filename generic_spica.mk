@@ -48,11 +48,8 @@ PRODUCT_PACKAGES += \
     openvpn
 
 PRODUCT_PACKAGES += \
-    ADWLauncher \
     CMParts \
     CMPartsHelper \
-    CMStats \
-    CMUpdateNotify \
     CMWallpapers \
     FileManager \
     Stk \
@@ -107,11 +104,23 @@ SPICA_WITH_GOOGLE:=true
 ifdef SPICA_WITH_GOOGLE
 
     PRODUCT_COPY_FILES += \
+	vendor/spica/proprietary/AndriodTerm.apk:system/app/AndriodTerm.apk \
+	vendor/spica/proprietary/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
+	vendor/spica/proprietary/BarcodeScanner.apk:system/app/BarcodeScanner.apk \
+	vendor/spica/proprietary/GingerbreadKeyboard.apk:system/app/GingerbreadKeyboard.apk \
+	vendor/spica/proprietary/libjni_latinime_moo.so:system/lib/libjni_latinime_moo.so \
+	vendor/spica/proprietary/GPSTest.apk:system/app/GPSTest.apk \
+	vendor/spica/proprietary/LauncherPro.apk:system/app/LauncherPro.apk \
+	vendor/spica/proprietary/QuickPic.apk:system/app/QuickPic.apk \
+	vendor/spica/proprietary/libqpic121.so:system/lib/libqpic121.so \
+	vendor/spica/proprietary/GooglePlayServices.apk:system/app/GooglePlayServices.apk \
+	vendor/spica/proprietary/libAppDataSearch.so:system/lib/libAppDataSearch.so \
+	vendor/spica/proprietary/libgames_rtmp_jni.so:system/lib/libgames_rtmp_jni.so \
+	vendor/spica/proprietary/WifiAnalyzer.apk:system/app/WifiAnalyzer.apk \
 	vendor/spica/proprietary/CarHomeGoogle.apk:system/app/CarHomeGoogle.apk \
 	vendor/spica/proprietary/CarHomeLauncher.apk:system/app/CarHomeLauncher.apk \
 	vendor/spica/proprietary/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
 	vendor/spica/proprietary/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
-	vendor/spica/proprietary/Facebook.apk:system/app/Facebook.apk \
 	vendor/spica/proprietary/features.xml:system/etc/permissions/features.xml \
 	vendor/spica/proprietary/GenieWidget.apk:system/app/GenieWidget.apk \
 	vendor/spica/proprietary/Gmail.apk:system/app/Gmail.apk \
@@ -119,14 +128,7 @@ ifdef SPICA_WITH_GOOGLE
 	vendor/spica/proprietary/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter.apk \
 	vendor/spica/proprietary/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
 	vendor/spica/proprietary/GoogleFeedback.apk:system/app/GoogleFeedback.apk \
-	vendor/spica/proprietary/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk \
-	vendor/spica/proprietary/GoogleQuickSearchBox.apk:system/app/GoogleQuickSearchBox.apk \
 	vendor/spica/proprietary/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
-	vendor/spica/proprietary/googlevoice.apk:system/app/googlevoice.apk \
-	vendor/spica/proprietary/HtcCopyright.apk:system/app/HtcCopyright.apk \
-	vendor/spica/proprietary/HtcEmailPolicy.apk:system/app/HtcEmailPolicy.apk \
-	vendor/spica/proprietary/HtcSettings.apk:system/app/HtcSettings.apk \
-	vendor/spica/proprietary/LatinImeTutorial.apk:system/app/LatinImeTutorial.apk \
 	vendor/spica/proprietary/libinterstitial.so:system/lib/libinterstitial.so \
 	vendor/spica/proprietary/libspeech.so:system/lib/libspeech.so \
 	vendor/spica/proprietary/libvoicesearch.so:system/lib/libvoicesearch.so \
@@ -137,23 +139,22 @@ ifdef SPICA_WITH_GOOGLE
 	vendor/spica/proprietary/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
 	vendor/spica/proprietary/SetupWizard.apk:system/app/SetupWizard.apk \
 	vendor/spica/proprietary/Talk.apk:system/app/Talk.apk \
-	vendor/spica/proprietary/Twitter.apk:system/app/Twitter.apk \
 	vendor/spica/proprietary/Vending.apk:system/app/Vending.apk \
 	vendor/spica/proprietary/VoiceSearch.apk:system/app/VoiceSearch.apk \
 	vendor/spica/proprietary/YouTube.apk:system/app/YouTube.apk
 else
     PRODUCT_PACKAGES += \
-        Provision \
-        GoogleSearch \
-        LatinIME
+        Provision
 endif
 
 # Copy over the changelog to the device
 PRODUCT_COPY_FILES += \
 	vendor/spica/CHANGELOG:system/etc/CHANGELOG.txt
 
+#PRODUCT_COPY_FILES += \
+#	vendor/cyanogen/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
 PRODUCT_COPY_FILES += \
-	vendor/cyanogen/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
+	device/samsung/spica/CHANGELOG:system/etc/CHANGELOG-CM.txt
 
 #
 # Copy bootanimation
