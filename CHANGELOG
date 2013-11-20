@@ -1,12 +1,13 @@
-2013-11-17:
+2013-11-18:
 
 * Minimum backlight level decreased to lowest possible value
 * included Intercept3D-CM8.4.zip
 * YouTube HD fix
 * included DpadMusicControl-0.1-CM8.3.zip
-* included SSSwitch6v02.zip
+* included SSSwitch6v03.zip
 * lastest Google Apps
 * GenieWidget 1.3.04 mod
+* CMWallpapers from Gingerbread
 
 * Removed apps:
  - ADWLauncher
@@ -26,6 +27,7 @@
 
 * Added apps:
  + AndriodTerm.apk
+ + AutoStartManager.apk
  + BarcodeScanner.apk
  + GingerbreadKeyboard.apk
  + GPSTest.apk

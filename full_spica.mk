@@ -9,7 +9,6 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/spica/overlay
 # density in DPI of the LCD of this board. This is used to scale the UI
 # appropriately. If this property is not defined, the default value is 160 dpi. 
 PRODUCT_PROPERTY_OVERRIDES += \
-    media.stagefright.enable-http=false \
     ro.sf.lcd_density=160 \
     ro.opengles.version=131072
 

@@ -106,6 +106,7 @@ ifdef SPICA_WITH_GOOGLE
     PRODUCT_COPY_FILES += \
 	vendor/spica/proprietary/AndriodTerm.apk:system/app/AndriodTerm.apk \
 	vendor/spica/proprietary/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
+	vendor/spica/proprietary/AutoStartManager.apk:system/app/AutoStartManager.apk \
 	vendor/spica/proprietary/BarcodeScanner.apk:system/app/BarcodeScanner.apk \
 	vendor/spica/proprietary/GingerbreadKeyboard.apk:system/app/GingerbreadKeyboard.apk \
 	vendor/spica/proprietary/libjni_latinime_moo.so:system/lib/libjni_latinime_moo.so \
